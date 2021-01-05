@@ -28,7 +28,7 @@ function saveTask(e){
   descriptionOfTask.clear();
 
   // localStorage.setItem('Tasks',JSON.stringify(task));
-  console.log(task.description);
+  getTasks();
   e.preventDefault();
 }
 
@@ -45,12 +45,23 @@ function getTasks(){
       <p>${description}</p>
       <a class="btn-delete" onClick="deleteTask('${title}')">Delete</a>
     </div>`;
-    console.log(data[i]);
   }
 
 }
 
 function deleteTask(title){
   console.log(title)
+
+  let data = JSON.parse(localStorage.getItem('tasks'));
+
+  for(let i=0; i < data.length; i++){
+    if(data[i].title == title){
+      data.splice(i,1);
+    }
+  }
+  localStorage.setItem('tasks', JSON.stringify(data));
+  getTasks();
 }
+
+
 getTasks();
