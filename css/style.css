@@ -54,7 +54,6 @@
     padding: 10px;
 }
 
-form{}
 
 form .in-title{
     width: 100%;
@@ -66,7 +65,7 @@ form .in-title{
     outline:none;
     border: 1px solid ;
     border-color: var(--borde-1);
-    padding: 3px;
+    padding: 5px;
     font-size:16px;
     
 }
@@ -80,7 +79,7 @@ form .in-title{
     border: 1px solid ;
     border-color: var(--borde-1);
     font-size: 16px;
-    padding: 3px;
+    padding: 5px;
     outline: none;
 }
 
@@ -137,9 +136,43 @@ form .in-title{
 .space-for-tasks{
     display:none;
     width: 100%;
-    padding:5px;
+    padding:25px;
 }
 
+.tasksView{
+    width: 100%;
+    margin: 15px 0;
+    padding:10px 0;
+    border-bottom: 1px solid;
+    border-color: var(--borde-1);
+}
+
+.tasksView h3{
+    font-weight: bold;
+}
+
+.tasksView p{
+    font-weight: 300;
+}
+
+.tasksView .btn-delete{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width: 70px;
+    height: 30px;
+    padding: 5px;
+    background: rgb(199, 15, 15);
+    border-radius: 25px;
+    margin: 5px 0;
+    padding: 3px;
+    color:white;
+}
+
+.tasksView .btn-delete:hover{
+    background: rgb(240, 16, 16);
+    cursor: pointer;
+}
 
 /* Media querys */
 @media screen and (min-width:768px){

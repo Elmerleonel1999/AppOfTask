@@ -38,9 +38,19 @@ function getTasks(){
   taskView.innerHTML = "";
 
   for(let i= 0; i < data.length; i++){
+    let title = data[i].title;
+    let description = data[i].description;
+    taskView.innerHTML += `<div class="tasksView">
+      <h3>${title}</h3>
+      <p>${description}</p>
+      <a class="btn-delete" onClick="deleteTask('${title}')">Delete</a>
+    </div>`;
     console.log(data[i]);
   }
 
 }
 
+function deleteTask(title){
+  console.log(title)
+}
 getTasks();
